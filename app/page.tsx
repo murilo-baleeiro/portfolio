@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ChartColumnBig, Code, Database, Network } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -40,11 +41,26 @@ export default function Home() {
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-lg leading-relaxed text-[#D2C1B6]/80"
+          className="text-lg leading-relaxed text-[#D2C1B6]/80 flex flex-col gap-6"
         >
-          Profissional com mais de 5 anos de experiência em infraestrutura de TI, administração de servidores e suporte
-          técnico. Atuação com ambientes críticos garantindo disponibilidade superior a 98%, gestão de bancos SQL e
-          NoSQL e desenvolvimento de soluções internas para otimização de processos.
+          <p className="text-justify">
+            Presente no mercado de tecnologia desde 2018, com foco em infraestrutura de TI, desenvolvimento de soluções
+            e suporte técnico. Atualmente, sou Analista de Infraestrutura Jr. na ViaRondon, onde administro servidores
+            físicos e virtuais, gerencio bancos de dados e desenvolvo aplicações internas para otimizar processos.
+            Anteriormente, trabalhei na Marfrig Global Foods, prestando suporte técnico corporativo e manutenção de
+            hardware.
+          </p>
+          <p className="text-justify">
+            Sou apaixonado por tecnologia e estou sempre buscando aprender novas habilidades para me manter atualizado
+            no mercado. Tenho experiência com vSphere, vCenter, Veeam, Windows Server, Linux/Unix, SQL Server, MySQL,
+            PostgreSQL, MongoDB, C#, Node.js, TypeScript, SQL e automações. Também sou proficiente em ferramentas de
+            monitoramento como Zabbix, Grafana e ServiceNow.
+          </p>
+          <p className="text-justify">
+            Meu objetivo é continuar crescendo na área de tecnologia, assumindo desafios cada vez maiores e contribuindo
+            para o sucesso das empresas onde atuo. Estou aberto a novas oportunidades e sempre disposto a colaborar com
+            equipes multidisciplinares para alcançar resultados excepcionais.
+          </p>
         </motion.p>
       </section>
       {/* HABILIDADES */}
@@ -60,10 +76,18 @@ export default function Home() {
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Infraestrutura", desc: "vSphere, vCenter, Veeam, Windows Server, Linux/Unix" },
-              { title: "Bancos de Dados", desc: "SQL Server, MySQL, PostgreSQL, MongoDB" },
-              { title: "Desenvolvimento", desc: "C#, Node.js, TypeScript, SQL, automações" },
-              { title: "Monitoramento", desc: "Zabbix, Grafana, ServiceNow, troubleshooting" },
+              {
+                icon: <Network />,
+                title: "Infraestrutura",
+                desc: "vSphere, vCenter, Veeam, Windows Server, Linux/Unix",
+              },
+              { icon: <Database />, title: "Bancos de Dados", desc: "SQL Server, MySQL, PostgreSQL, MongoDB" },
+              { icon: <Code />, title: "Desenvolvimento", desc: "C#, Node.js, TypeScript, SQL, Batch, PowerShell" },
+              {
+                icon: <ChartColumnBig />,
+                title: "Monitoramento",
+                desc: "Zabbix, Grafana, ServiceNow, Troubleshooting",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -72,6 +96,7 @@ export default function Home() {
                 transition={{ delay: index * 0.2 }}
                 className="glass p-8 rounded-2xl hover:-translate-y-3 transition duration-500"
               >
+                <div className="mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                 <p className="text-[#D2C1B6]/70">{item.desc}</p>
               </motion.div>
@@ -84,7 +109,7 @@ export default function Home() {
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
-          className="text-4xl font-semibold mb-16"
+          className="text-4xl font-semibold mb-16 flex flex-row items-center gap-4"
         >
           Experiência
         </motion.h2>
