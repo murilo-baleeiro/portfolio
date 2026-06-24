@@ -1,22 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --primary-dark: #1B3C53;
-  --primary-medium: #234C6A;
-  --accent: #456882;
-  --light: #D2C1B6;
+@theme {
+  --color-primary-dark: #1b3c53;
+  --color-primary-medium: #234c6a;
+  --color-accent: #456882;
+  --color-light: #d2c1b6;
 }
 
 body {
-  background: var(--primary-dark);
-  color: var(--light);
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, #1B3C53, #234C6A);
-}
-
-.glass {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
+  background: var(--color-primary-dark);
+  color: var(--color-light);
 }
