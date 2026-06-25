@@ -1,6 +1,6 @@
 "use client";
 
-import { ChartColumnBig, Code, Database, Network } from "lucide-react";
+import { CircuitBoard, Code, Database, Network } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import SkillCard from "./SkillCard";
 
@@ -8,22 +8,22 @@ const skills = [
   {
     icon: <Network size={28} />,
     title: "Infraestrutura",
-    desc: "vSphere, vCenter, Veeam, Windows Server, Linux/Unix",
+    desc: "Administração de servidores Windows e Linux, gestão de redes, Active Directory, Veeam e virtualização de servidores com VMware e Hyper-V.",
   },
   {
     icon: <Database size={28} />,
     title: "Bancos de Dados",
-    desc: "SQL Server, MySQL, PostgreSQL, MongoDB",
+    desc: "Consultas, monitoramento e manutenção em banco de dados relacionais e não relacionais.",
   },
   {
     icon: <Code size={28} />,
     title: "Desenvolvimento",
-    desc: "C#, Node.js, TypeScript, SQL, Batch, PowerShell",
+    desc: "Soluções em software e automações internas para otimização de processos, utilizando linguagens como C#, Node.js, Python e PowerShell.",
   },
   {
-    icon: <ChartColumnBig size={28} />,
-    title: "Monitoramento",
-    desc: "Zabbix, Grafana, ServiceNow, Troubleshooting",
+    icon: <CircuitBoard size={28} />,
+    title: "Hardware",
+    desc: "Prototipagem e desenvolvimento de soluções em hardware, sistemas embarcados, circuitos de controles e automação.",
   },
 ];
 

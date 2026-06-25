@@ -18,7 +18,16 @@ const item = {
   },
 };
 
-const tags = ["vSphere", "Windows Server", "Linux", "SQL Server", "C#", "Node.js"];
+const tags = [
+  "Windows",
+  "Linux",
+  "Active Directory",
+  "Veeam",
+  "Banco de Dados",
+  "Desenvolvimento",
+  "Automações",
+  "Hardware",
+];
 
 export default function Hero() {
   return (
@@ -44,9 +53,7 @@ export default function Hero() {
         className="relative z-10 text-center px-6 max-w-4xl"
       >
         <motion.div variants={item}>
-          <p className="text-white font-semibold text-base sm:text-lg md:text-xl tracking-[0.3em]">
-            MURILO BALEEIRO
-          </p>
+          <p className="text-white font-semibold text-base sm:text-lg md:text-xl tracking-[0.3em]">MURILO BALEEIRO</p>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -69,14 +76,10 @@ export default function Hero() {
           variants={item}
           className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed"
         >
-          Especialista em infraestrutura de TI, virtualização, bancos de dados
-          e desenvolvimento de soluções internas.
+          Especialista em infraestrutura de TI, virtualização, bancos de dados e desenvolvimento de soluções internas.
         </motion.p>
 
-        <motion.div
-          variants={item}
-          className="mt-8 sm:mt-12 flex flex-wrap justify-center gap-2 sm:gap-3"
-        >
+        <motion.div variants={item} className="mt-8 sm:mt-12 flex flex-wrap justify-center gap-2 sm:gap-3">
           {tags.map((tech) => (
             <span
               key={tech}
