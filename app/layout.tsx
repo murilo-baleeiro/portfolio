@@ -13,9 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Murilo Baleeiro | Portfólio",
+  title: "Murilo Baleeiro | Infraestrutura & Desenvolvimento",
   description:
-    "Portfólio profissional de Murilo Baleeiro, especialista em infraestrutura de TI, desenvolvimento e soluções internas. Com mais de 5 anos de experiência, Murilo é um profissional dedicado a otimizar processos e garantir a eficiência em ambientes críticos. Explore suas habilidades técnicas, experiências profissionais e projetos para conhecer melhor seu trabalho e expertise.",
+    "Especialista em infraestrutura de TI, virtualização, bancos de dados e desenvolvimento de soluções internas.",
+  openGraph: {
+    title: "Murilo Baleeiro | Infraestrutura & Desenvolvimento",
+    description:
+      "Especialista em infraestrutura de TI, virtualização, bancos de dados e desenvolvimento de soluções internas.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
 }

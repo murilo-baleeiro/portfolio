@@ -22,11 +22,12 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-32 px-10 max-w-6xl mx-auto">
+    <section className="py-24 sm:py-32 px-6 max-w-6xl mx-auto">
       <SectionTitle>Experiência</SectionTitle>
-      <div className="space-y-16 border-l-2 border-accent pl-10">
+      <div className="relative">
+        <div className="absolute left-[3px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-accent/40 via-accent/20 to-transparent" />
         {experiences.map((exp, i) => (
-          <ExperienceItem key={i} {...exp} />
+          <ExperienceItem key={i} {...exp} index={i} />
         ))}
       </div>
     </section>
