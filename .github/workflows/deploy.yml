@@ -12,18 +12,18 @@ jobs:
     steps:
       - name: Pull do repositório
         run: |
-          cd /home/devmuca/deploy/portfolio
+          cd /home/devmuca/apps/portfolio
           git fetch origin
           git reset --hard origin/main
 
       - name: Instalar dependências
         run: |
-          cd /home/devmuca/deploy/portfolio
+          cd /home/devmuca/apps/portfolio
           npm ci
 
       - name: Build
         run: |
-          cd /home/devmuca/deploy/portfolio
+          cd /home/devmuca/apps/portfolio
           npm run build
 
       - name: Reiniciar PM2
