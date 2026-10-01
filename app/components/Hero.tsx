@@ -19,14 +19,13 @@ const item = {
 };
 
 const tags = [
-  "Windows",
-  "Linux",
-  "Active Directory",
-  "Veeam",
-  "Banco de Dados",
-  "Desenvolvimento",
-  "Automações",
-  "Hardware",
+  "Redes & Infrastrutura",
+  "Desenvolvimento de Aplicações",
+  "Automação & Scripting",
+  "ServiceNow & ITSM",
+  "Suporte Técnico",
+  "DevOps/Cloud",
+  "Virtualização",
 ];
 
 export default function Hero() {
@@ -41,9 +40,9 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[150px] animate-float" />
-        <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[180px] animate-float-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/3 rounded-full blur-[250px]" />
+        <div className="absolute -top-40 -left-40 w-125 h-125 bg-accent/10 rounded-full blur-[150px] animate-float" />
+        <div className="absolute -bottom-40 -right-40 w-150 h-150 bg-accent/5 rounded-full blur-[180px] animate-float-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-accent/3 rounded-full blur-[250px]" />
       </div>
 
       <motion.div
@@ -58,7 +57,7 @@ export default function Hero() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="h-[1px] w-10 bg-accent/60 mx-auto mt-3 sm:mt-4 origin-center"
+            className="h-px w-10 bg-accent/60 mx-auto mt-3 sm:mt-4 origin-center"
           />
         </motion.div>
 
@@ -67,7 +66,7 @@ export default function Hero() {
           className="mt-8 sm:mt-10 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05]"
         >
           Infraestrutura &<br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-accent to-blue-400">
             Desenvolvimento
           </span>
         </motion.h1>
@@ -76,14 +75,14 @@ export default function Hero() {
           variants={item}
           className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed"
         >
-          Especialista em infraestrutura de TI, virtualização, bancos de dados e desenvolvimento de soluções internas.
+          Especialista em Redes, Infraestrutura e Desenvolvimento de Aplicações. Apaixonado por tecnologia, automação e soluções inovadoras.
         </motion.p>
 
         <motion.div variants={item} className="mt-8 sm:mt-12 flex flex-wrap justify-center gap-2 sm:gap-3">
           {tags.map((tech) => (
             <span
               key={tech}
-              className="px-3 sm:px-5 py-1.5 sm:py-2.5 text-xs sm:text-sm font-mono border border-accent/20 bg-accent/[0.03] text-accent/80 rounded-full hover:bg-accent/10 hover:border-accent/40 transition-all duration-300"
+              className="px-3 sm:px-5 py-1.5 sm:py-2.5 text-xs sm:text-sm font-mono border border-accent/20 bg-accent/3 text-accent/80 rounded-full hover:bg-accent/10 hover:border-accent/40 transition-all duration-300"
             >
               {tech}
             </span>
